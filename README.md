@@ -2,7 +2,7 @@
 
 Automated tests for the PlayerController API using Java, RestAssured, and TestNG.
 
-## 🔧 Tech Stack
+## Tech Stack
 
 - Java 11  
 - TestNG  
@@ -11,7 +11,7 @@ Automated tests for the PlayerController API using Java, RestAssured, and TestNG
 - Gradle  
 - Lombok
 
-## ✅ Features
+## Features
 
 - Positive and negative tests for all API endpoints
 - Deserialization and validation of JSON responses
@@ -20,7 +20,7 @@ Automated tests for the PlayerController API using Java, RestAssured, and TestNG
 - Parallel test execution
 - Allure integration with environment metadata
 
-## 🚀 How to Run
+## How to Run
 
 ```bash
 ./gradlew clean test
@@ -41,7 +41,7 @@ Automated tests for the PlayerController API using Java, RestAssured, and TestNG
 > Or manually:
 > `allure serve build/allure-results/`
 
-## 🗂 Config
+## Config
 
 Set base URL and environment in:
 ```
