@@ -25,7 +25,7 @@ public class DeletePlayerTest extends BaseTest {
         AssertHelper.assertPlayerNotFound(getDeletedResponse);
     }
 
-    @Issue("BUG-11: Server returns 403 instead of 404 when deleting non-existent player")
+    @Issue("BUG-11: Server returns 403 instead of 404 when deleting non-existent user")
     @Test(description = "Negative test: delete non-existent player")
     public void testDeletePlayerNotFound() {
         Response response = playerClient.deletePlayer(999999L, VALID_EDITOR);

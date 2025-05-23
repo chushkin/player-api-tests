@@ -13,7 +13,7 @@ import static org.testng.Assert.assertTrue;
 
 public class CreatePlayerTest extends BaseTest {
 
-    @Issue("BUG-5: Response fields are null after player creation")
+    @Issue("BUG-5: Response contains null fields after successful creation")
     @Test(description = "Positive test: create player with valid data")
     public void testCreatePlayerSuccessfully() {
         Player player = DataGenerator.generateValidPlayer();

@@ -31,7 +31,7 @@ public class UpdatePlayerTest extends BaseTest {
         AssertHelper.assertLoginUpdated(player, actual, updatedLogin);
     }
 
-    @Issue("BUG-10: Server allows updating player with invalid age")
+    @Issue("BUG-12: User can be updated with invalid age")
     @Test(description = "Negative test: update player with invalid age")
     public void testUpdatePlayerInvalidAge() {
         Player player = TestDataHelper.createAndReturnPlayer(VALID_EDITOR, playerClient);

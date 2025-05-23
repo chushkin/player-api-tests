@@ -23,7 +23,7 @@ public class GetPlayerTest extends BaseTest {
         AssertHelper.assertPlayerEquals(player, actual);
     }
 
-    @Issue("BUG-10: Server returns 200 instead of 404 when getting non-existent player")
+    @Issue("BUG-10: Server returns 200 OK for non-existent user")
     @Test(description = "Negative test: get non-existent player")
     public void testGetPlayerNotFound() {
         Response response = playerClient.getPlayer(999999L);
