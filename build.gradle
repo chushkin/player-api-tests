@@ -1,0 +1,42 @@
+plugins {
+    id 'java'
+    id 'io.qameta.allure' version '2.11.2'
+}
+
+group = 'com.player-api-tests'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // TestNG
+    implementation 'org.testng:testng:7.8.0'
+
+    // REST-assured
+    implementation 'io.rest-assured:rest-assured:5.4.0'
+    testImplementation 'io.qameta.allure:allure-testng:2.24.0'
+
+    // Jackson for JSON
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.17.1'
+
+    // Logging
+    implementation 'org.slf4j:slf4j-simple:2.0.12'
+
+    // Lombok
+    compileOnly 'org.projectlombok:lombok:1.18.30'
+    annotationProcessor 'org.projectlombok:lombok:1.18.30'
+}
+
+test {
+    useTestNG {
+        suites 'src/testng.xml'
+    }
+    testLogging {
+        events "passed", "failed", "skipped"
+    }
+    maxParallelForks = 3
+    systemProperties = System.getProperties()
+    outputs.dir file("build/allure-results")
+}

@@ -1,0 +1,22 @@
+# Java
+*.class
+*.jar
+*.war
+*.ear
+
+# Build
+/build/
+.gradle/
+out/
+target/
+
+# IntelliJ
+.idea/
+*.iml
+
+# Allure
+allure-report/
+allure-results/
+
+# System
+.DS_Store
